@@ -48,7 +48,7 @@ y(17)=1.0_dp
 y(18)=0.0_dp
 
 
-!number of steps and length of the simulations. Its better to touch these and not h
+!number of steps and length of the simulation
 N=20000
 t0=0.0_dp
 tf=20.0_dp
