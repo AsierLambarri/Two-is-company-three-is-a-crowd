@@ -5,6 +5,7 @@ public :: leapfrog_paso_dp
 contains
 
 subroutine leapfrog_paso_dp(x,y,f,h)
+!Fourth-order Leapfrog method using Yoshida coefficients
 use mcf_tipos
 
 real(kind=dp), intent(inout)                :: x
