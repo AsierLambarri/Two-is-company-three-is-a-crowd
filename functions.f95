@@ -1,24 +1,27 @@
 module functions
-
+!dependencies
 use mcf_tipos
-
+!declaration of the functions 
 public :: E_inter, grad_E, F
-
-real(kind=dp), public :: k      !parametroak
+!parameters: k=coupling constant, m=vector of masses. both can be accessed from the main program
+real(kind=dp), public :: k      
 real(kind=dp), allocatable, dimension(:), public :: m
 
 contains
         function E_inter(x1,y1,z1,m1,x2,y2,z2,m2)
+                !Function that models the potential energy between two particles
                 real(kind=dp), intent(in) :: x1,y1,z1,x2,y2,z2,m1,m2
                 real(kind=dp) :: E_inter
 
-                E_inter=-k*m1*m2/sqrt((x1-x2)**2.0_dp+(y1-y2)**2.0_dp)
+                E_inter=-k*m1*m2/sqrt((x1-x2)**2.0_dp+(y1-y2)**2.0_dp+(z1-z2)**2.0_dp)
         end function E_inter
 
         function grad_E(x1,y1,z1,m1,x2,y2,z2,m2)
+                !Force exerted on particle 1 by particle 2 obtained via numerical differentiation
                 real(kind=dp), intent(in) :: x1,y1,z1,x2,y2,z2,m1,m2
                 real(kind=dp) :: h
                 real(kind=dp), dimension(3) :: grad_E 
+                !h may be changed if the scale of your system is different
                 h=1.0E-5_dp
 
                 grad_E(1)=(E_inter(x1+h,y1,z1,m1,x2,y2,z2,m2)-E_inter(x1-h,y1,z1,m1,x2,y2,z2,m2))/(2*h)
@@ -28,6 +31,7 @@ contains
         end function grad_E
 
         function F(t,y)
+                !Function that calculates and returns the acceleration of a particle due to the forces of all the other particles exert on him
                 real(kind=dp), dimension(:), intent(in) :: y
                 real(kind=dp), intent(in) :: t
                 real(kind=dp), dimension(size(y)) :: F
