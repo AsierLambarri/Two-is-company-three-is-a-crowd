@@ -10,11 +10,13 @@ There are several functions built into functions.f95 and RK4 and Leapfrog method
 
 **> f95 mcf_tipos.f95 functions.f95 rk4.f90/leapfrog.f95 main.f95**
 
-The result is an executable named a.out which, upon execution, creates a file named **fort.123** that contains the trajectories of each particle. Particle positions are written for each instant (a line in the file) as x1 y1 z1 x2 y2 z2 and so on.
+The result is an executable named a.out which, upon execution, creates a file named **fort.123** that contains the trajectories of each particle. Particle positions are written for each instant (a line in the file) as: x1 y1 z1 x2 y2 z2, and so on.
+
+
+An example is shown bellow: a lemniscate dance for a three particle stable configuration under a newtonian potential. The motion happens in z=1. The gif is made with matplotlib.
 
 <p alignt="center">
    <img src="https://github.com/AsierLambarri/Two-is-company-three-is-a-crowd/assets/109964584/50e547c6-740c-4970-bdff-f37cdc44322f.gif">
 </p>
 
-Figure: Lemniscate dance for a three particle stable configuration under a newtonian potential. The motion happen in z=1. The gif is made with matplotlib.
 
