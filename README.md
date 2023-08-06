@@ -6,7 +6,7 @@ Runge-Kutta 4 and the simplectic fourth-order Leapfrog methods are implemented f
 
 ## Code information
 
-There are several functions built into functions.f95 and RK4 and Leapfrog methods have their own .f9x module. mcf_tipos.f95 has all the information regarding various parameters that are used in the main program: main.f95. The main program must be compiled in the following way:
+There are several functions built into functions.f95 and RK4 and Leapfrog methods have their own .f9x module. mcf_tipos.f95 has all the information regarding various parameters that are used in the main program: main.f95. Initial conditions must be specified and the form of the potential energy/force must be entered directly in functions.f95. The main program must be compiled in the following way:
 
 **> f95 mcf_tipos.f95 functions.f95 rk4.f90/leapfrog.f95 main.f95**
 
