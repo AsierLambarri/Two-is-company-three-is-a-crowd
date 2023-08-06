@@ -4,6 +4,7 @@ public ::  rk4_paso_dp
 contains
 
 subroutine rk4_paso_dp(x,y,f,h)
+!Runge-Kutta 4 integraiton method
 use mcf_tipos
 
 real(kind=dp), intent(inout)                :: x
