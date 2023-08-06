@@ -1,5 +1,5 @@
 program main
-
+!dependencies
 use mcf_tipos
 use functions
 use rk4
@@ -10,10 +10,13 @@ real(kind=dp), dimension(2) :: r1, r2
 real(kind=dp) :: t0, tf, h, eps
 integer :: N, i, j, ii, jj, kk, np, p1, p2
 
+!The first part of this program may be modified and the number of particles and I.C.'s may be loaded
+!from a file. For that, keep in mind that the state vector "y" is defined as follows:
+!y=(/x1, vx1, y1, vy1, z1, vz1, x2, vx2, y2, vy2,.../)
+
+!initializing parameters: coupling constant, number of particles and collision criterions (eps)
 k=1.0_dp 
-
 np=3
-
 eps=5.0E-3_dp
 
 allocate(m(np), y(6*np))
