@@ -6,7 +6,9 @@ Runge-Kutta 4 and the simplectic fourth-order Leapfrog methods are implemented f
 
 
 
+<figure>
+   <img src="https://github.com/AsierLambarri/Two-is-company-three-is-a-crowd/assets/109964584/efdf3b0c-2295-45f2-8534-c4ce7a0f3df2.gif" alt="16-Bit Image">
+   <figcaption>16-Bit RGB Image</figcaption>
+</figure>
 
 
-
-![movie](https://github.com/AsierLambarri/Two-is-company-three-is-a-crowd/assets/109964584/efdf3b0c-2295-45f2-8534-c4ce7a0f3df2.gif)
