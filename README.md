@@ -6,9 +6,9 @@ Runge-Kutta 4 and the simplectic fourth-order Leapfrog methods are implemented f
 
 
 
-<div style="text-align:center>
+<figure>
    <img src="https://github.com/AsierLambarri/Two-is-company-three-is-a-crowd/assets/109964584/50e547c6-740c-4970-bdff-f37cdc44322f.gif">
-<p> Figure: Lemniscate dance for a three particle stable configuration under a newtonian potential. The motion happen in z=1. The gif is made with matplotlib.</p>
-</div>
+<figcaption> Figure: Lemniscate dance for a three particle stable configuration under a newtonian potential. The motion happen in z=1. The gif is made with matplotlib.</figcaption>
+</figure>
 
 
